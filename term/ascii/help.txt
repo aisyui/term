@@ -1,0 +1,20 @@
+
+Commands:
+        ai
+
+Flags:
+	-h, --help
+
+Options:
+	a				:	logo
+	v				:	pds version
+	p				:	ai profile
+	did <handle>	 :	did
+	plc <handle>	 :	plc
+	record <handle>  :	timeline
+
+ex:
+	$ ai v : {\"version\":\"0.0.1\"}
+
+https://git.syui.ai/ai/bot
+
