@@ -12,15 +12,15 @@ $(function() {
 	var handle = "yui.syui.ai";
 	var file_all = "ai.json";
 
-	var ai_help = axios.get('/term/ascii/help.txt')
+	var ai_help = axios.get('https://term.syui.ai/term/ascii/help.txt')
 		.then(function (response) {
 			return response.data;
 		});
-	var ascii_ai = axios.get('/term/ascii/ai.txt')
+	var ascii_ai = axios.get('https://term.syui.ai/term/ascii/ai.txt')
 		.then(function (response) {
 			return response.data;
 		});
-	var ascii_avatar = axios.get('/term/ascii/avatar.txt')
+	var ascii_avatar = axios.get('https://term.syui.ai/term/ascii/avatar.txt')
 		.then(function (response) {
 			return response.data;
 		});
@@ -75,7 +75,7 @@ $(function() {
 
 	function test_json() {
 		var u;
-		u = axios.get('/term/json/ai.json')
+		u = axios.get('https://term.syui.ai/term/json/ai.json')
 			.then(function (response) {
 				return JSON.stringify(response.data,null,"\t");
 			})
