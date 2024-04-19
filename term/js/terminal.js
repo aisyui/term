@@ -8,7 +8,7 @@ $(function() {
  if (did == null) { did = "did:plc:4hqjfn7m6n5hno3doamuhgef" };
 	if (user) { prompt = "[[b;#87cefa;]" + user + "][[b;#FFFF00;]@aios] ~$ " };
 	var tab = "[[b;#87cefa;]<tab>]";
-	var command_all = ["ai","ls","ai.json"];
+	var command_all = ["ai","ls","ai.json", "hugo", "pico", "nyancat"];
 	var handle = "yui.syui.ai";
 	var file_all = "ai.json";
 
@@ -174,6 +174,29 @@ $(function() {
 			$.getJSON(url, function(data) {
 				term.echo(JSON.stringify(data,null,"\t"));
 			});$.ajaxSetup({async: true});		
+
+		} else if (inputs[0] === 'hugo') {
+			url = 'https://yui.syui.ai/index.json';
+			$.ajaxSetup({async: false});
+			$.getJSON(url, function(data) {
+				index_json = JSON.stringify(data,null,"\t");
+				origin_index_json = JSON.parse(index_json);
+				origin_index_json.forEach(function(v,index) {
+					s = v.title + " "  + v.href;
+					term.echo(s);
+				});
+			});$.ajaxSetup({async: true});		
+		} else if (/nyancat/.test(input)) {
+			term.read("jump page?[y] : ", function(s) {
+				if (s === "y") {
+					window.location.href = 'https://syui.ai/nyancat';
+				}
+			}).then(function(s) {
+				s.charCodeAt(0);
+			});
+		} else if (/pico/.test(input)) {
+			window.location.href = 'https://syui.ai/pico';
+
 		} else {
 			term.echo(ai_help);
 		}
