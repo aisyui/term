@@ -19,5 +19,5 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 System name:             "ai os"
 System host name:        "aios"
-System kernel version:   "5.15.0-101-generic"
+System nick name:        "ai"
 System url:              "https://git.syui.ai/ai/os"
