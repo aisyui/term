@@ -176,7 +176,9 @@ $(function() {
 			});$.ajaxSetup({async: true});		
 
 		} else if (inputs[0] === 'hugo') {
-			url = 'https://yui.syui.ai/index.json';
+			hugo_domain = 'yui.syui.ai';
+			if (inputs[1] != undefined) { hugo_domain = inputs[1]; }
+			url = 'https://' + hugo_domain + '/index.json';
 			$.ajaxSetup({async: false});
 			$.getJSON(url, function(data) {
 				index_json = JSON.stringify(data,null,"\t");
@@ -186,6 +188,8 @@ $(function() {
 					term.echo(s);
 				});
 			});$.ajaxSetup({async: true});		
+			term.echo("-----");
+			term.echo("$ hugo " + hugo_domain);
 		} else if (/nyancat/.test(input)) {
 			term.read("jump page?[y] : ", function(s) {
 				if (s === "y") {
