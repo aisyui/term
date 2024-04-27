@@ -423,15 +423,6 @@
 span {
 	font-size: 15px;
 }
-#particles-js {
-	position: absolute;
-	width: 98%;
-}
-#particles-js-no {
-	position: absolute;
-	width: 98%;
-}
-
 #icon-github:hover,
 i.icon.ion-close-circled:hover,
 i.icon.ion-minus-circled:hover,
